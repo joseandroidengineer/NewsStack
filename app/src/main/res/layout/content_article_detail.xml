@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/fragment_detail">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        >
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:padding="8dp"
+            android:clipToPadding="false"
+            android:elevation="8dp"
+            app:cardElevation="8dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="16dp"
+                android:clipToPadding="false">
+                <ImageView
+                    android:id="@+id/thumbnail_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_launcher_background"/>
+                <TextView
+                    android:id="@+id/title_tv"
+                    android:textColor="#000"
+                    android:textSize="24sp"
+                    android:text="Title of Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp"
+                    />
+                <TextView
+                    android:id="@+id/pub_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary"
+                    android:background="#FFF"
+                    android:padding="8dp"
+                    android:text="Publisher"
+                    android:layout_marginBottom="8dp"
+                    android:textSize="14sp"/>
+                <TextView
+                    android:id="@+id/content_tv"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TEST~!"
+                    android:visibility="visible"
+                    android:layout_marginBottom="16dp"/>
+                <WebView
+                    android:id="@+id/article_wv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/error_tv"
+            android:layout_width="378dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="100dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Something went wrong "
+            android:textSize="36sp" />
+
+        <ImageView
+            android:id="@+id/error_iv"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_margin="180dp" />
+
+    </FrameLayout>
+
+
+
+
+</androidx.core.widget.NestedScrollView>
